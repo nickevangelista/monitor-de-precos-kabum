@@ -25,6 +25,7 @@ jobs:
         env: # Puxa as variáveis das Secrets do GitHub
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python monitoramentowithmessage.py
-        run: python monitoramentowithmessage copy.py
-        run: python monitoramentowithmessage copy 2.py
+        run: |
+          python monitoramentowithmessage.py
+          python "monitoramentowithmessage copy.py"
+          python "monitoramentowithmessage copy 2.py"
